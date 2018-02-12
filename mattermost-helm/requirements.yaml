@@ -1,31 +1,33 @@
 dependencies:
-  - name: mattermost-app
-    version: 0.1.0
-    tags:
-      - core
-  - name: mattermost-db
-    version: 0.2.6
-    tags:
-      - core
-  - name: mattermost-grafana
-    version: 0.3.6
+#  - name: mattermost-db
+#    version: 0.2.6
+#    repository: https://releases.mattermost.com/helm
+#    tags:
+#      - core
+  - name: grafana
+    version: 0.6.1
+    repository: "alias:stable" #https://kubernetes-charts.storage.googleapis.com 
     tags:
       - metrics
       - loadtest
-  - name: mattermost-loadtest
-    version: 0.1.0
-    tags:
-      - loadtest
-  - name: mattermost-prometheus
-    version: 3.1.0
+#  - name: mattermost-loadtest
+#    version: 0.1.0
+#    repository: https://releases.mattermost.com/helm
+#    tags:
+#      - loadtest
+  - name: prometheus
+    version: 5.1.0
+    repository: "alias:stable"
     tags:
       - metrics
       - loadtest
-  - name: mattermost-proxy
-    version: 0.1.0
-    tags:
-      - core
-  - name: mattermost-minio
-    version: 0.1.3
+#  - name: mattermost-proxy
+#    version: 0.1.0
+#    repository: "alias:mattermost" #https://releases.mattermost.com/helm
+#    tags:
+#      - core
+  - name: minio
+    version: 0.5.2
+    repository: "alias:stable"
     tags:
       - core
